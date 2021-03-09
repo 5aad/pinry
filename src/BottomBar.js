@@ -26,7 +26,7 @@ export default () => {
 
   return (
     <Tabs.Navigator
-      initialRouteName={"Home"}
+      initialRouteName={"Feed"}
       backBehavior="history"
       appearence={{
         whenInactiveShow: 'icon-only',

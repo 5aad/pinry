@@ -1,6 +1,13 @@
 import React from 'react';
 import {View} from 'react-native';
-import Svg, {Path, G, Circle} from 'react-native-svg';
+import Svg, {
+  Path,
+  G,
+  Circle,
+  Defs,
+  LinearGradient,
+  Stop,
+} from 'react-native-svg';
 const Icons = ({name, color}) => {
   return (
     <View>
@@ -8,18 +15,28 @@ const Icons = ({name, color}) => {
         <>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
-            width="27.695"
-            height="25.059"
-            viewBox="0 0 27.695 25.059">
-            <G fill="#c9e265">
-              <Path
-                d="M12.24 7.814l-.895-.895a3.485 3.485 0 01-1.869.544 3.518 3.518 0 113.518-3.518 3.483 3.483 0 01-.544 1.869l.895.895a.781.781 0 01-1.105 1.105zM4.785.036a.782.782 0 00-.782.782v2.345H1.658V.818a.782.782 0 00-1.564 0v6.254a.782.782 0 001.564 0V4.727h2.345v2.345a.782.782 0 001.564 0V.818a.782.782 0 00-.782-.782z"
-                transform="translate(-.038 -.059) translate(11.836 17.076)"></Path>
-            </G>
+            width="20.5"
+            height="21.618"
+            viewBox="0 0 20.5 21.618">
+            <Defs>
+              <LinearGradient
+                id="a"
+                x1="0.5"
+                x2="0.5"
+                y2="1"
+                gradientUnits="objectBoundingBox">
+                <Stop offset="0" stopColor="#d988ff"></Stop>
+                <Stop offset="1" stopColor="#8b5cff"></Stop>
+              </LinearGradient>
+            </Defs>
             <Path
-              fill={color}
-              d="M27.454 11.205L14.388.242a.783.783 0 00-1.005 0L.317 11.205a.783.783 0 001.006 1.2l1.62-1.36v13.103a.782.782 0 00.782.782h5.861a.782.782 0 100-1.564H4.507V9.73l9.38-7.87 9.382 7.872v5.816a.782.782 0 101.564 0v-4.5l1.618 1.358a.781.781 0 101-1.2z"
-              transform="translate(-.038 -.059)"></Path>
+              fill="url(#a)"
+              stroke="#8b5cff"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              d="M9.157 20.771V17.7a1.426 1.426 0 011.424-1.419h2.886A1.426 1.426 0 0114.9 17.7h0v3.076A1.225 1.225 0 0016.1 22h1.924a3.456 3.456 0 003.476-3.438h0V9.838a2.439 2.439 0 00-.962-1.9l-6.58-5.248a3.18 3.18 0 00-3.944 0L3.462 7.943a2.42 2.42 0 00-.962 1.9v8.714A3.456 3.456 0 005.973 22H7.9a1.235 1.235 0 001.241-1.229h0"
+              transform="translate(-1.75 -1.132)"></Path>
           </Svg>
         </>
       ) : null}
