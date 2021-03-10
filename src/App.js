@@ -6,7 +6,10 @@ import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import ForgetPassword from './screens/ForgetPassword';
 import UploadPhoto from './screens/UploadPhoto';
-import ChooseGender from './screens/CreateCompetition';
+import ChooseGender from './screens/ChooseGender';
+import FeedScreen from './screens/FeedScreen';
+import CommentScreen from './screens/CommentScreen';
+import FullWidthScreen from './screens/FullWidthScreen';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -38,10 +41,25 @@ const App = () => {
           name="UploadPhoto"
           component={UploadPhoto}
         />
-                <Stack.Screen
+        <Stack.Screen
           options={{headerShown: false}}
           name="ChooseGender"
           component={ChooseGender}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="FeedScreen"
+          component={FeedScreen}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="CommentScreen"
+          component={CommentScreen}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="FullWidthScreen"
+          component={FullWidthScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

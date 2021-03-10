@@ -75,6 +75,16 @@ const ChooseGender = ({navigation}) => {
           <Text style={[styles.lblGen, {color: femaleTxt}]}>Female</Text>
         </View>
       </View>
+      <TouchableWithoutFeedback
+        onPress={() => navigation.navigate('FullWidthScreen')}>
+        <LinearGradient
+          colors={['#D988FF', '#8B5CFF']}
+          start={{x: 0, y: 0.5}}
+          end={{x: 1, y: 0.5}}
+          style={styles.linearGradients}>
+          <Text style={styles.lblSign}>Continue</Text>
+        </LinearGradient>
+      </TouchableWithoutFeedback>
     </SafeAreaView>
   );
 };
@@ -112,6 +122,19 @@ const styles = StyleSheet.create({
   lblGen: {
     fontSize: 20,
     marginTop: 10,
+  },
+  lblSign: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#fff',
+    marginVertical: 17,
+    textAlign: 'center',
+  },
+  linearGradients: {
+    borderRadius: 15,
+    height: 56,
+    marginTop: 22,
+    marginHorizontal:20
   },
 });
 export default ChooseGender;
