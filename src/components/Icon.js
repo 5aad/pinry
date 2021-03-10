@@ -8,10 +8,10 @@ import Svg, {
   LinearGradient,
   Stop,
 } from 'react-native-svg';
-const Icons = ({name, color}) => {
+const Icons = ({name, color, color1, color2, color3}) => {
   return (
     <View>
-      {name === 'home' ? (
+      {name === 'feed' ? (
         <>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,13 +25,13 @@ const Icons = ({name, color}) => {
                 x2="0.5"
                 y2="1"
                 gradientUnits="objectBoundingBox">
-                <Stop offset="0" stopColor="#d988ff"></Stop>
-                <Stop offset="1" stopColor="#8b5cff"></Stop>
+                <Stop offset="0" stopColor={color2}></Stop>
+                <Stop offset="1" stopColor={color1}></Stop>
               </LinearGradient>
             </Defs>
             <Path
               fill="url(#a)"
-              stroke="#8b5cff"
+              stroke={color3}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="1.5"
@@ -40,22 +40,68 @@ const Icons = ({name, color}) => {
           </Svg>
         </>
       ) : null}
-      {name === 'fav' ? (
+      {name === 'map' ? (
         <>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
-            width="27.8"
-            height="23.8"
-            viewBox="0 0 27.8 23.8">
-            <Path
+            width="16.857"
+            height="19.836"
+            viewBox="0 0 16.857 19.836">
+            <Defs>
+              <LinearGradient
+                id="a"
+                x1="0.5"
+                x2="0.5"
+                y2="1"
+                gradientUnits="objectBoundingBox">
+                <Stop offset="0" stopColor={color2}></Stop>
+                <Stop offset="1" stopColor={color1}></Stop>
+              </LinearGradient>
+            </Defs>
+            <G transform="translate(-550.25 -788.726)">
+              <Path
+                fill="url(#a)"
+                stroke={color3}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M4.239 10.391a7.678 7.678 0 0115.357.052v.087a11.339 11.339 0 01-3.478 7.3 20.184 20.184 0 01-3.591 2.957.93.93 0 01-1.217 0 19.818 19.818 0 01-5.052-4.73 9.826 9.826 0 01-2.017-5.635z"
+                transform="translate(546.761 786.737)"></Path>
+              <Circle
+                cx="2.461"
+                cy="2.461"
+                r="2.461"
+                fill="none"
+                stroke={color3}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                transform="translate(555.718 794.815)"></Circle>
+            </G>
+          </Svg>
+        </>
+      ) : null}
+      {name === 'explore' ? (
+        <>
+          <Svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20.575"
+            height="21.033"
+            viewBox="0 0 20.575 21.033">
+            <G
               fill="none"
-              stroke={color}
+              stroke={color1}
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeMiterlimit="10"
-              strokeWidth="1.8"
-              d="M24 1.945a6.991 6.991 0 00-9.677 0L13 3.224l-1.319-1.279a6.993 6.993 0 00-9.681 0 6.5 6.5 0 000 9.388l1.318 1.279L13 22l9.677-9.388L24 11.333a6.5 6.5 0 000-9.388z"
-              transform="translate(.9 .9)"></Path>
+              strokeWidth="1.5"
+              transform="translate(-2.028 -2.028)">
+              <Circle
+                cx="8.989"
+                cy="8.989"
+                r="8.989"
+                transform="translate(2.778 2.778)"></Circle>
+              <Path d="M18.018 18.485L21.542 22"></Path>
+            </G>
           </Svg>
         </>
       ) : null}
@@ -63,19 +109,33 @@ const Icons = ({name, color}) => {
         <>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
-            width="22.8"
-            height="24.8"
-            viewBox="0 0 22.8 24.8">
+            width="16.665"
+            height="20.723"
+            viewBox="0 0 16.665 20.723">
+            <Defs>
+              <LinearGradient
+                id="a"
+                x1="0.5"
+                x2="0.5"
+                y2="1"
+                gradientUnits="objectBoundingBox">
+                <Stop offset="0" stopColor={color2}></Stop>
+                <Stop offset="1" stopColor={color1}></Stop>
+              </LinearGradient>
+            </Defs>
             <G
-              fill="none"
-              stroke={color}
+              fill="url(#a)"
+              stroke={color3}
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeMiterlimit="10"
-              strokeWidth="1.8"
-              transform="translate(.9 .9)">
-              <Path d="M21 23v-2.667A5.292 5.292 0 0015.75 15H5.25A5.292 5.292 0 000 20.333V23z"></Path>
-              <Circle cx="5" cy="5" r="5" transform="translate(5.5)"></Circle>
+              strokeWidth="1.5"
+              transform="translate(-3708.25 -684.25) translate(3705 683)">
+              <Circle
+                cx="4.778"
+                cy="4.778"
+                r="4.778"
+                transform="translate(6.801 2)"></Circle>
+              <Path d="M4 18.2a2.215 2.215 0 01.22-.97 4.042 4.042 0 012.819-1.62 16.793 16.793 0 012.343-.33 25.059 25.059 0 014.384 0 16.979 16.979 0 012.343.33c1.071.22 2.361.659 2.819 1.62a2.27 2.27 0 010 1.95c-.458.961-1.748 1.4-2.819 1.611a15.709 15.709 0 01-2.343.339 25.825 25.825 0 01-3.57.055 4.067 4.067 0 01-.815-.055 15.43 15.43 0 01-2.334-.339c-1.08-.21-2.362-.65-2.828-1.611A2.279 2.279 0 014 18.2z"></Path>
             </G>
           </Svg>
         </>

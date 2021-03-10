@@ -23,7 +23,9 @@ const FullWidthScreen = ({navigation}) => {
       <ImageBackground source={images.Photo} style={styles.bgProfile}>
         <ImageBackground source={images.overlay} style={styles.bgImg}>
           <Appbar.Header style={styles.bgHeader}>
+          <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
             <Image source={images.close} />
+            </TouchableWithoutFeedback>
           </Appbar.Header>
           <View style={styles.subContainer}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>

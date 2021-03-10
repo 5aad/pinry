@@ -3,9 +3,10 @@ import {SafeAreaView, StyleSheet} from 'react-native';
 import {AnimatedTabBarNavigator} from 'react-native-animated-nav-tab-bar';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icons from './components/Icon';
-import HomeScreen from './screens/HomeScreen';
-import EngagementScreen from './screens/EngagementScreen';
-import AccountScreen from './screens/AccountScreen';
+import FeedScreen from './screens/FeedScreen';
+import MapScreen from './screens/MapScreen';
+import SearchScreen from './screens/SearchScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 const Tabs = AnimatedTabBarNavigator();
 const TabBarIcon = (props) => {
@@ -19,58 +20,86 @@ const TabBarIcon = (props) => {
 };
 
 const TabBarCustomIcon = (props) => {
-  return <Icons name={props.name} color={props.tintColor} />;
+  return (
+    <Icons
+      name={props.name}
+      color1={props.tintColor}
+      color2={props.tinitColor2}
+      color3={props.strokeColor}
+    />
+  );
 };
 
 export default () => {
-
   return (
     <Tabs.Navigator
-      initialRouteName={"Feed"}
+      initialRouteName={'Feed'}
       backBehavior="history"
-      appearence={{
-        whenInactiveShow: 'icon-only',
-        whenActiveShow: 'icon-only',
-        shadow: true,
-        dotSize:'small'
+      appearance={{
+        whenActiveShow: 'both',
+        whenInactiveShow: 'both',
+        tabButtonLayout: 'vertical',
       }}
       tabBarOptions={{
-        activeTintColor: '#CB6CE6',
-        inactiveTintColor: '#B9B9B9',
+        activeTintColor: '#8B5CFF',
+        inactiveTintColor: '#949BB3',
         activeBackgroundColor: 'transparent',
       }}>
       <Tabs.Screen
-        name="Home"
-        component={HomeScreen}
+        name="Feed"
+        component={FeedScreen}
         options={{
           tabBarIcon: ({focused, color, size}) => (
             <TabBarCustomIcon
               size={24}
               focused={focused}
-              tintColor={color}
-              name="home"
+              tintColor={color === '#8B5CFF' ? '#8B5CFF' : '#fff'}
+              tinitColor2={color === '#8B5CFF' ? '#D988FF' : '#fff'}
+              strokeColor={color === '#8B5CFF' ? 'transparent' : '#949BB3'}
+              name="feed"
             />
           ),
         }}
       />
       <Tabs.Screen
-        name="Fav"
-        component={EngagementScreen}
+        name="Map"
+        component={MapScreen}
         options={{
           tabBarIcon: ({focused, color, size}) => (
-            <TabBarCustomIcon focused={focused} tintColor={color} name="fav" />
+            <TabBarCustomIcon
+              focused={focused}
+              tintColor={color === '#8B5CFF' ? '#8B5CFF' : '#fff'}
+              tinitColor2={color === '#8B5CFF' ? '#D988FF' : '#fff'}
+              strokeColor={color === '#8B5CFF' ? '#fff' : '#949BB3'}
+              name="map"
+            />
           ),
         }}
       />
 
       <Tabs.Screen
-        name="Profile"
-        component={AccountScreen}
+        name="Explore"
+        component={SearchScreen}
         options={{
           tabBarIcon: ({focused, color, size}) => (
             <TabBarCustomIcon
               focused={focused}
               tintColor={color}
+              name="explore"
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: ({focused, color, size}) => (
+            <TabBarCustomIcon
+              focused={focused}
+              tintColor={color === '#8B5CFF' ? '#8B5CFF' : '#fff'}
+              tinitColor2={color === '#8B5CFF' ? '#D988FF' : '#fff'}
+              strokeColor={color === '#8B5CFF' ? 'transparent' : '#949BB3'}
               name="profile"
             />
           ),

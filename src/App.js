@@ -10,6 +10,7 @@ import ChooseGender from './screens/ChooseGender';
 import FeedScreen from './screens/FeedScreen';
 import CommentScreen from './screens/CommentScreen';
 import FullWidthScreen from './screens/FullWidthScreen';
+import BottomBar from './BottomBar';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -48,8 +49,8 @@ const App = () => {
         />
         <Stack.Screen
           options={{headerShown: false}}
-          name="FeedScreen"
-          component={FeedScreen}
+          name="BottomBar"
+          component={BottomBar}
         />
         <Stack.Screen
           options={{headerShown: false}}

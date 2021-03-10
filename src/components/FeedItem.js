@@ -6,6 +6,7 @@ import {
   View,
   Text,
   TouchableHighlight,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import {Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Feather';
@@ -30,7 +31,10 @@ const FeedItem = ({nav, Data}) => {
             <Icon name="more-horizontal" size={24} color="#E1E4E8" />
           </View>
         </Card.Content>
-        <Card.Cover resizeMode="contain" source={item.cover} />
+        <TouchableWithoutFeedback
+          onPress={() => nav.navigate('FullWidthScreen')}>
+          <Card.Cover resizeMode="contain" source={item.cover} />
+        </TouchableWithoutFeedback>
       </Card>
     </View>
   );

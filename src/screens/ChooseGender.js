@@ -76,7 +76,7 @@ const ChooseGender = ({navigation}) => {
         </View>
       </View>
       <TouchableWithoutFeedback
-        onPress={() => navigation.navigate('FullWidthScreen')}>
+        onPress={() => navigation.navigate('BottomBar')}>
         <LinearGradient
           colors={['#D988FF', '#8B5CFF']}
           start={{x: 0, y: 0.5}}
