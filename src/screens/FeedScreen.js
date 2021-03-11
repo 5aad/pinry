@@ -29,7 +29,11 @@ const Data = [
 const FeedScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="#fff"
+        translucent={false}
+      />
       <Appbar.Header style={styles.bgHeader}>
         <Image source={images.logoss} />
         <View style={{position: 'relative'}}>

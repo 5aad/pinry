@@ -12,7 +12,7 @@ import images from '../api/images';
 const MapScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="dark-content" backgroundColor="#fff"      translucent={false} />
       <Appbar.Header style={styles.bgHeader}>
         <View style={styles.hd}>
           <Image source={images.logoss} />
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F6FA',
   },
   hd: {
-
+flex:1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     elevation: 0,
     flexDirection: 'column',
     paddingHorizontal: 20,
-    height: 125,
+    height: 140,
   },
   indication: {
     position: 'absolute',
