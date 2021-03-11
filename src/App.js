@@ -11,6 +11,7 @@ import FeedScreen from './screens/FeedScreen';
 import CommentScreen from './screens/CommentScreen';
 import FullWidthScreen from './screens/FullWidthScreen';
 import BottomBar from './BottomBar';
+import CompitionView from './screens/CompitionView';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -61,6 +62,11 @@ const App = () => {
           options={{headerShown: false}}
           name="FullWidthScreen"
           component={FullWidthScreen}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="CompitionView"
+          component={CompitionView}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -7,12 +7,17 @@ import {
   StatusBar,
   TextInput,
 } from 'react-native';
+import MapView from 'react-native-maps';
 import {Appbar} from 'react-native-paper';
 import images from '../api/images';
 const MapScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff"      translucent={false} />
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="#fff"
+        translucent={false}
+      />
       <Appbar.Header style={styles.bgHeader}>
         <View style={styles.hd}>
           <Image source={images.logoss} />
@@ -33,20 +38,34 @@ const MapScreen = () => {
           </View>
         </View>
       </Appbar.Header>
+      <MapView
+      style={styles.mapSize}
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      />
     </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
+  mapSize:{
+    width:'100%',
+    height:'100%'
+
+  },
   container: {
     flex: 1,
     backgroundColor: '#F4F6FA',
   },
   hd: {
-flex:1,
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    width:'100%'
+    width: '100%',
   },
   bgHeader: {
     backgroundColor: '#fff',
