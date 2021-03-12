@@ -7,8 +7,9 @@ import FeedScreen from './screens/FeedScreen';
 import MapScreen from './screens/MapScreen';
 import SearchScreen from './screens/SearchScreen';
 import ProfileScreen from './screens/ProfileScreen';
-
-const Tabs = AnimatedTabBarNavigator();
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+// const Tabs = AnimatedTabBarNavigator();
+const Tabs = createBottomTabNavigator();
 const TabBarIcon = (props) => {
   return (
     <Icon
@@ -39,11 +40,14 @@ export default () => {
         whenActiveShow: 'both',
         whenInactiveShow: 'both',
         tabButtonLayout: 'vertical',
+        dotCornerRadius: 0,
+        dotSize: 'small',
       }}
       tabBarOptions={{
         activeTintColor: '#8B5CFF',
         inactiveTintColor: '#949BB3',
         activeBackgroundColor: 'transparent',
+        style: {paddingBottom: 10, height: 60},
       }}>
       <Tabs.Screen
         name="Feed"
