@@ -28,6 +28,7 @@ const images = {
   send: require(`${ICON_PATH}send.png`),
   close: require(`${ICON_PATH}close.png`),
   comment: require(`${ICON_PATH}comment.png`),
+  comment1: require(`${ICON_PATH}comment1.png`),
   setting: require(`${ICON_PATH}setting.png`),
   location: require(`${ICON_PATH}location.png`),
   edit: require(`${ICON_PATH}edit.png`),

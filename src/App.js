@@ -7,11 +7,11 @@ import SignupScreen from './screens/SignupScreen';
 import ForgetPassword from './screens/ForgetPassword';
 import UploadPhoto from './screens/UploadPhoto';
 import ChooseGender from './screens/ChooseGender';
-import FeedScreen from './screens/FeedScreen';
 import CommentScreen from './screens/CommentScreen';
 import FullWidthScreen from './screens/FullWidthScreen';
 import BottomBar from './BottomBar';
 import CompitionView from './screens/CompitionView';
+import CreateCompetition from './screens/CreateCompetition';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -67,6 +67,11 @@ const App = () => {
           options={{headerShown: false}}
           name="CompitionView"
           component={CompitionView}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="CreateCompetition"
+          component={CreateCompetition}
         />
       </Stack.Navigator>
     </NavigationContainer>

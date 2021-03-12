@@ -35,10 +35,10 @@ const CompitionView = ({navigation}) => {
             justifyContent: 'space-between',
           }}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <Image source={images.avatar2} />
+            <Image style={styles.imgAv} source={images.avatar2} />
             <View style={{flexDirection: 'column', marginLeft: 10}}>
-              <Text style={styles.name}>Mabelle Blake</Text>
-              <Text style={styles.loc}>United State</Text>
+              <Text style={styles.name}>Brent Robertson</Text>
+              <Text style={styles.loc}>31m ago</Text>
             </View>
           </View>
 
@@ -59,15 +59,16 @@ const CompitionView = ({navigation}) => {
                   alignItems: 'center',
                   marginLeft: 20,
                 }}>
-                <Image source={images.comment} />
+                <Image source={images.comment1} />
                 <Text style={styles.txtlc}>348</Text>
               </View>
             </TouchableWithoutFeedback>
           </View>
         </View>
-        <Text>Rules</Text>
-        <Text>• Picture Should be clear and not blur</Text>
-        <Text>• Picture Should be clear and not blur</Text>
+        <Text style={styles.rHead}>Rules</Text>
+        <Text style={styles.rNum}>• Picture Should be clear and not blur</Text>
+        <Text style={styles.rNum}>• Picture Should be clear and not blur</Text>
+        <TouchableWithoutFeedback onPress={()=>navigation.navigate('CreateCompetition')}>
         <LinearGradient
           colors={['#D988FF', '#8B5CFF']}
           start={{x: 0, y: 0.5}}
@@ -75,8 +76,9 @@ const CompitionView = ({navigation}) => {
           style={styles.linearGradient}>
           <Text style={styles.lblSign}>Enter Competition</Text>
         </LinearGradient>
+        </TouchableWithoutFeedback>
       </View>
-      <Text>Other Competitors </Text>
+      <Text style={styles.other}>Other Competitors </Text>
       <GridImg />
     </SafeAreaView>
   );
@@ -114,5 +116,38 @@ const styles = StyleSheet.create({
     marginVertical: 17,
     textAlign: 'center',
   },
+  name:{
+    fontSize:15,
+    fontWeight:'bold',
+    color:'#2D3142'
+  },
+  loc:{
+      color:'#1E2432',
+      fontSize:11
+  },
+  imgAv:{
+      width:30,
+      height:30
+  },
+  txtlc:{
+      fontSize:15,
+      marginLeft:10
+  },rHead:{
+      fontSize:16,
+      fontWeight:'600',
+      color:'#0A1F44',
+      marginTop:10
+  },
+  rNum:{
+      fontSize:15,
+      color:'#4C5980',
+
+  },other:{
+    fontSize:16,
+    fontWeight:'600',
+    color:'#0A1F44',
+    marginLeft:10
+  }
+
 });
 export default CompitionView;

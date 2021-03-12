@@ -1,11 +1,16 @@
 import React from 'react';
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Image, SafeAreaView, StyleSheet, Text,StatusBar, View} from 'react-native';
 import {Appbar, TextInput, Button} from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
 import images from '../api/images';
 const CreateCompetition = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
+            <StatusBar
+        barStyle="dark-content"
+        translucent={false}
+        backgroundColor="#F4F6FA"
+      />
       <Appbar.Header style={styles.bgHeader}>
         <Appbar.BackAction onPress={() => navigation.goBack()} />
       </Appbar.Header>
